@@ -1,0 +1,198 @@
+/* Fuente principal */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+    color: #0d0d0d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Contenedor principal */
+  .container {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  /* Título */
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Formulario */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  /* Campo de entrada */
+  input[type="url"] {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input[type="url"]:focus {
+    border-color: #0077cc;
+    outline: none;
+  }
+  
+  /* Botones generales */
+  button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #0077cc;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 0.5rem;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+    transform: scale(1.02);
+  }
+  
+  /* Botón modo oscuro */
+  #toggleThemeBtn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: whitesmoke;
+    color: black;
+  }
+  
+  #toggleThemeBtn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Resultado del QR */
+  #qrResult {
+    margin-top: 2rem;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  canvas {
+    margin: 1rem auto;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #qrLink {
+    font-size: 0.9rem;
+    color: #0077cc;
+    word-break: break-all;
+    margin-top: 0.5rem;
+  }
+  
+  /* Mensaje de confirmación */
+  #confirmationMessage {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: green;
+    opacity: 0;
+    animation: fadeInOut 2s ease-in-out forwards;
+  }
+  
+  /* Oculto */
+  .hidden {
+    display: none;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+  
+  /* Botones de acción específicos */
+  #copyBtn {
+    background-color: #0077cc;
+  }
+  
+  #copyBtn:hover {
+    background-color: #005fa3;
+  }
+  
+  #shareBtns button {
+    background-color: #25D366;
+    margin-top: 1rem;
+  }
+  
+  #shareBtns button:hover {
+    background-color: #128C7E;
+  }
+  
+  /* Responsive */
+  @media (max-width: 500px) {
+    .container {
+      padding: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 1.5rem;
+    }
+  
+    button {
+      font-size: 0.95rem;
+    }
+  }
+  
+  /* Modo oscuro */
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+  }
+  
+  body.dark-mode .container {
+    background-color: #2c2c2c;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+  }
+  
+  body.dark-mode input[type="url"] {
+    background-color: #444;
+    color: #f2f2f2;
+    border-color: #666;
+  }
+  
+  body.dark-mode #qrLink {
+    color: #4fa3ff;
+  }
+  
+  body.dark-mode button {
+    background-color: #005fa3;
+  }
+  
+  body.dark-mode button:hover {
+    background-color: #0077cc;
+  }
+  
+  body.dark-mode #toggleThemeBtn {
+    background-color: #333;
+    color: #f2f2f2;
+  }
+  

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generador de Códigos QR</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="toggleThemeBtn">Modo oscuro</button>
+
+  <div class="container">
+    <h1>Generador de Códigos QR</h1>
+    
+    <form id="qrForm">
+      <input type="url" id="url" placeholder="Ingresa una URL" required />
+      <button type="submit">Generar QR</button>
+    </form>
+
+    <div id="qrResult" class="hidden">
+      <canvas id="qrCanvas"></canvas>
+      <a id="qrLink" href="#" target="_blank"></a>
+
+      <div id="shareBtns">
+        <button id="copyBtn">Copiar QR</button>
+        <button id="whatsappBtn">Compartir por WhatsApp</button>
+      </div>
+      
+      <div id="confirmationMessage" class="hidden"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
